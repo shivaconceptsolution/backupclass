@@ -1,0 +1,59 @@
+what is MERN STACK:
+
+it Is a combination of front-end,back-end,middleware and database technology.
+
+M--> (Mongo DB) it is NO SQL based database
+
+E --> (Express JS) it is web framework that will work as a middleware between application and database.
+
+R --> (React JS)  it is JS library that is used to create dynamic user interface.
+
+N ---> (NODE JS) it is the runtime environment that provide database operation using javascript with mongodb.
+
+Learning path
+
+UI --->  HTML + CSS + JS + REACT JS
+
+BACKEND:-  NODE + MONGO DB, MYSQL
+
+MIDDLEWARE:  EXPRESS JS
+
+..............
+HTML:-  
+
+It means hypertext markup language, it provide predefine structure, tag element and attribute to design static web page.
+
+it use CSS to advance design and JS to implement dynamic functionality.
+
+
+Syntax of HTML:-
+<html>
+<head>
+    <title></title>
+    <meta>
+    <style>
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+ram
+<ram>
+
+install visual studio code in machine
+
+
+
+
+
+
+
+
+
+
+
+
