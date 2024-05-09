@@ -1,0 +1,98 @@
+What is HTML?
+
+it means hypertext markup language that is used to design User interface for static website directly and dynamic website embedded with server side script.
+
+H stand for hypertext means text within tag.
+<p> </p>
+
+M stand for markup means predefine.
+
+Now HTML 5 is the latest version.
+
+HTML language directly interpreted by the browser.
+
+<!doctype>
+<html lang='en'>
+<head>
+<meta />
+<title>Title of Web page</title>
+<style></style>
+<script></script>
+<link .... />
+</head>
+<body>
+   <p>All Html tag supported here</p>
+</body>
+</html>
+.........................
+
+Important HTML Tag
+
+1)  Heading tag:-  start from <h1></h1> to <h6></h6>
+according to SEO guideline only one h1 tag should be used on one page.
+
+2) Font tag:-  it is used to increase font size change color of HTML text under paragraph.
+<font></font>
+
+3) Paragraph Tag:-  it is used to write single line or multiple line of text. multiple paragraph display content into new-line.
+<p> </p>
+<p> </p>
+
+4) span tag:-  it is used to display the in-line content.
+
+<span>text here</span>
+<span>text here</span>
+
+5) <i></i>:- convert text into italic
+
+6) <b></b>: convert text to bold
+
+7) <strike></strike>:-  convert text to cross line
+
+8)  <mark></mark>:- highlight content.
+
+9)  <strong></strong>:- it is similar to bold tag but it provide highlighted content to seo guideline.
+
+10) <sup></sup>:  it is used to create superscript based text.
+
+<p>CompanyName<sup>tm</sup></p>
+
+11) <sub></sub>:- it is used to create subscript based text.
+
+12) <fieldset></fieldset>:- it is used to create group box under html page.
+
+
+<fieldset>
+<legend> Our Mission</legend>
+<p> ......</p>
+</fieldset>
+
+
+13) <img />:- it is used to display the image under HTML page.
+
+<img src="path" alt="alternate text" title="alternate text" />
+
+14) List Tag:-
+
+it is used to store the group of elements under html web page.
+
+1)  ordered list
+
+    <ol>
+      <li>item1</li>
+      <li>item2</li>
+    </ol>
+
+2) unordered list
+
+   <ul>
+     <li>item1</li>
+     <li>item2</li>
+  </ul>
+
+3) definition list
+   <dl>
+       <dt>what is java?</dt>
+       <dd>Java is oops based language</dd>
+   </dl>
+
