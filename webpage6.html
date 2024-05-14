@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .maincontainer p   /*nested block */ {     
+            color:blue;
+        }
+        .maincontainer .subcontainer p  /*nested .block */
+        {
+            color:yellow;
+        }
+
+        #middle p     /*nested #block */
+        {
+            color:red;
+        }
+        .extrap
+        {
+            font-size: 25px;
+        }
+        h1,h2   /*multiple block */
+        {
+            background-color: brown !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <h2 style="background-color: cyan;">welcome in scs</h2>
+    <div class="maincontainer">
+        <p>welcome in main paragraph</p>
+        <div class="subcontainer extrap">
+            <p>Welcome in another paragraph</p>
+        </div>
+    </div>
+    <div id="middle">
+        <p>welcome in middle section</p>
+    </div>
+</body>
+</html>
