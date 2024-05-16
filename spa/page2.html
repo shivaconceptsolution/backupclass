@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: blue;
+            margin-right: 10px;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="home" class="page active">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the content of the Home page.</p>
+    </div>
+
+    <div id="about" class="page">
+        <h1>About Us</h1>
+        <p>This is the content of the About page.</p>
+    </div>
+
+    <div id="contact" class="page">
+        <h1>Contact Us</h1>
+        <p>This is the content of the Contact page.</p>
+    </div>
+
+    <style>
+        :target {
+            display: block;
+        }
+    </style>
+
+</body>
+</html>
