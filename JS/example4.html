@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var color='';
+        var color1='';
+        function setColor(c)
+        {
+            color=c;
+        }
+        function setColor1(c)
+        {
+            color1=c;
+        }
+        function changeColor()
+        {
+           document.body.bgColor=color;
+           document.body.style.color=color1;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>Change backgorund Color</p>
+        <p><input type="radio" value="Red" name="colorset1" onchange="setColor(this.value)"  />Red</p>
+        <p><input type="radio" value="Green" name="colorset1" onchange="setColor(this.value)" />Green</p>
+        <p><input type="radio" value="Blue" name="colorset1" onchange="setColor(this.value)"  />Blue</p>
+        <p>Change Text Color</p>
+        <p><input type="radio" value="Red" name="colorset2" onchange="setColor1(this.value)"  />Red</p>
+        <p><input type="radio" value="Green" name="colorset2" onchange="setColor1(this.value)" />Green</p>
+        <p><input type="radio" value="Blue" name="colorset2" onchange="setColor1(this.value)"  />Blue</p>
+        <p><input type="button" value="change color" onclick="changeColor()" /></p>        
+    </form>
+</body>
+</html>

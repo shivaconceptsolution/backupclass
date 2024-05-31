@@ -9,17 +9,21 @@
         {
             let num1 = document.getElementById("txtnum1").value;
             let num2 = document.getElementById("txtnum2").value;
-            let num3 = parseInt(num1)+parseInt(num2);
-            document.getElementById("res").innerHTML = "result is "+num3;
+            let num3 = document.getElementById("txtnum3").value;
+            let num4 = (parseFloat(num1)*parseFloat(num2)*parseFloat(num3))/100;
+            document.getElementById("res").innerHTML = "result is "+num4;
            // alert('result is '+num3);
         }
     </script>
 </head>
 <body>
-    <input type="text" id="txtnum1" placeholder="Enter First Number" />
+    <input type="number" id="txtnum1" placeholder="Enter P" />
     <br/>
     <br/>
-    <input type="text" id="txtnum2" placeholder="Enter Second Number" />
+    <input type="number" id="txtnum2" placeholder="Enter R" />
+    <br/>
+    <br />
+    <input type="number" id="txtnum3" placeholder="Enter T" />
     <br/>
     <br />
     <input type="button" onclick="addition()" value="click" />

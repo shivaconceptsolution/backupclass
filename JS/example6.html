@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function selectData(a)
+        {
+            alert(a);
+        }
+        function selectData1()
+        {
+            var c=document.getElementById("course");
+           
+           let course='';
+            for(var i=0;i<c.length;i++)
+            {
+                if(c[i].selected)
+                {
+                     course+=c[i].value + " ";
+                }
+                
+            }
+         
+            document.getElementById("res").innerHTML=course;
+            
+        }
+    </script>
+</head>
+<body>
+    <select onchange="selectData(this.value)">
+        <option value="">Select Course</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="DS">DS</option>
+        <option value="JAVA">JAVA</option>
+    </select>
+    <br><br>
+    <select id="course" onchange="selectData1()" multiple>
+       
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="DS">DS</option>
+        <option value="JAVA">JAVA</option>
+    </select>
+    <span id="res"></span>
+</body>
+</html>

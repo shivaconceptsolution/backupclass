@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayData()
+        {
+            var c=document.getElementsByName("course");
+            let course='';
+            for(var i=0;i<c.length;i++)
+            {
+                if(c[i].checked)
+                {
+                     course+=c[i].value + " ";
+                }
+                
+            }
+            //alert('course is '+course);
+            document.getElementById("res").innerHTML=course;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p><input type="checkbox" name="course" value="C" />C</p>
+        <p><input type="checkbox" name="course" value="C++" />C++</p>
+        <p><input type="checkbox" name="course" value="DS" />DS</p>
+        <p><input type="button" value="click" onclick="displayData()" /></p>
+        <span id="res"></span>
+    </form>
+</body>
+</html>
