@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function applyColor()
+        {
+            document.getElementById("txtuser").style.backgroundColor='Green';
+            document.getElementById("txtpass").style.backgroundColor='';
+
+        }
+        function removeColor()
+        {
+            
+            document.getElementById("txtuser").style.backgroundColor='';
+            document.getElementById("txtpass").style.backgroundColor='Green';
+        }
+        function fun()
+        {
+            document.body.bgColor='cyan';
+        }
+        function fun1()
+        {
+            document.body.bgColor='green';
+        }
+    </script>
+</head>
+<body onload="fun()" onunload="fun1()">
+    <input id="txtuser" type="text" onfocus="applyColor()" onblur="removeColor()" placeholder="enter username" />
+    <br><br>
+    <input id="txtpass" type="text" placeholder="enter password" />
+    <br><br>
+    <input type="button" value="Click here" />
+</body>
+</html>

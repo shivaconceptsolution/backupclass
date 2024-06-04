@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayData(a)
+        {
+            document.getElementById("res").innerHTML=a;
+        }
+        function displayData1(a)
+        {
+            document.getElementById("res").innerHTML=a;
+        }
+        function displayData2(a)
+        {
+            document.getElementById("res").innerHTML=a;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeyup="displayData(this.value)" placeholder="enter data" />
+    <br>
+    <input type="text" onkeypress="displayData1(this.value)" placeholder="enter data" />
+    <br>
+    <input type="text" onkeydown="displayData2(this.value)" placeholder="enter data" />
+    <br>
+    <div id="res"></div>
+</body>
+</html>

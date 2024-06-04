@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Add and Remove Form</title>
+    <style>
+        .form-container {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .form-container button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container"></div>
+    <button id="addFormButton">Add Form</button>
+
+    <script>
+        let formCount = 0;
+
+        // Function to create a form dynamically
+        function createForm() {
+            formCount++;
+            const formContainer = document.createElement('div');
+            formContainer.className = 'form-container';
+            formContainer.id = `formContainer${formCount}`;
+
+            // Create form element
+            const form = document.createElement('form');
+            form.id = `dynamicForm${formCount}`;
+
+            // Create label for input
+            const label = document.createElement('label');
+            label.for = `nameInput${formCount}`;
+            label.textContent = 'Name: ';
+
+            // Create input element
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.id = `nameInput${formCount}`;
+            input.name = 'name';
+
+            // Create submit button
+            const submitButton = document.createElement('button');
+            submitButton.type = 'submit';
+            submitButton.textContent = 'Submit';
+
+            // Create remove button
+            const removeButton = document.createElement('button');
+            removeButton.type = 'button';
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', () => {
+                document.getElementById(`formContainer${formCount}`).remove();
+            });
+
+            // Append label, input, and buttons to form
+            form.appendChild(label);
+            form.appendChild(input);
+            form.appendChild(submitButton);
+            form.appendChild(removeButton);
+
+            // Append form to the container
+            formContainer.appendChild(form);
+
+            // Append form container to the main container
+            document.getElementById('main-container').appendChild(formContainer);
+
+            // Add event listener to form
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Handle form submission
+                const nameValue = input.value;
+                alert('Form submitted! Name: ' + nameValue);
+            });
+        }
+
+        // Add event listener to "Add Form" button
+        document.getElementById('addFormButton').addEventListener('click', createForm);
+
+        // Initial form creation
+        createForm();
+    </script>
+</body>
+</html>

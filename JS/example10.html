@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+    <script>
+        function validate()
+        {
+            var name=document.getElementById("txtname").value;
+            var mobile=document.getElementById("txtmobile").value;
+            var email = document.getElementById("txtemail").value;
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            var pass = document.getElementById("txtpassword").value;
+            var cpass = document.getElementById("txtcpassword").value;
+            var flag=true;
+            if(!isNaN(name) || name.length==0)
+            {
+               // alert('name data is invalid');
+               document.getElementById("spname").innerHTML='name data is invalid';
+               flag=false;
+
+            }
+           if(isNaN(mobile) || mobile.length!=10)
+            {
+                //alert('mobile number is invalid');
+                document.getElementById("spmobile").innerHTML='mobile number is invalid';
+                flag=false;
+            }
+            if(atpos==-1 || atpos<2 || dotpos==-1  || dotpos<atpos || (dotpos-atpos)<3 || dotpos+1==email.length)
+            {
+                //alert('invalid emailid ');
+                document.getElementById("email").innerHTML='emailid is invalid';
+                flag=false;
+            }
+           if(pass!=cpass || pass.length==0)
+            {
+                //alert('password does not match with confirm password field');
+                document.getElementById("pass").innerHTML='password does not match with confirm password field';
+                flag=false;
+            }
+            return flag;
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        <p><input type="text" id="txtname" placeholder="Enter name"  /> <span id="spname"></span></p>
+        <p><input type="text" id="txtmobile" placeholder="Enter mobile"  /><span id="spmobile"></span></p>
+        <p><input type="text" id="txtemail" placeholder="Enter email"  /><span id="email"></span></p>
+        <p><input type="text" id="txtpassword" placeholder="Enter password"  /><span id="pass"></span></p>
+        <p><input type="text" id="txtcpassword" placeholder="Enter confirm password"  /></p>
+        <p><input type="submit" name="btnsubmit" value="click" onclick="return validate()" /></p>
+    </form>
+</body>
+</html>
